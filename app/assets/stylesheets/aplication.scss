@@ -105,6 +105,10 @@ body{
   border: none;
   color: white;
   font-family: $primaryfont;
+  transition: 0.3s;
+}
+#button:hover{
+  transform: scale(1.2);
 }
 }
 #button:hover{
