@@ -5,7 +5,9 @@
         </div>
     </div>
     <div class="col-xs-4">
-
+        <%if user_signed_in?%>
+        <%= link_to "Cerrar sesion",destroy_user_session_path, method: :delete, class: "closeSesion"%>
+        <%end%>
     </div>
 </div>
 
