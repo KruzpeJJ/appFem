@@ -1,6 +1,6 @@
 //@import "materialize";
 // rgb(54, 55, 56) rgba(9, 64, 171, 0.98)
-$wallpaper-nav: url("almora.jpg");
+$wallpaper-nav: url("blur-red-nav.png");
 $wallpaper-blur-red: url("blur-red.jpg");
 $primaryfont:'Open Sans', sans-serif;
 
@@ -14,7 +14,7 @@ html,body{
 #navUp{
   // font-family: $primaryfont;
   height: 3.5em;
-  background-image: $wallpaper-blur-red;
+  background-image: $wallpaper-nav;
   background-position: center;
   background-size: 100% 100%;
   // background-color: $nav-color;
@@ -28,50 +28,7 @@ html,body{
     height: 40px;
   }
 }
-#navLeft{
-  // font-family: $primaryfont;
-  background-image: $wallpaper-nav;
-  background-position: center;
-  background-size: 100% 100%;
-  // background-color: $nav-color;
-  position: fixed;
-  left: 0px;
-  height: 100vh;
-  box-shadow: 0px 0px 20px rgb(88, 75, 94);
-  z-index: 90;
-  margin: 0px;
-  display: inline-block;
-  .col-sm-12{
-    padding: 0px;
-  }
-  .box{
-    margin-top: 25%;
-    #Fem{
-      height: 10em;
-      background-color: rgb(7, 6, 9);
-    }
-    ul{
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      li{
-        padding: .5em;
-        margin-top: 1em;
-        margin-left: 1em;
-        margin-right: 1em;
-        a{
-          font-size: 1em;
-          text-decoration: none;
-          color: white;
-        }
-      }
-    }
-  }
-  li:hover{
-    box-shadow: 0px 0px 20px rgb(88, 75, 94);
-    cursor: pointer;
-  }
-}
+
 #log{
   min-width: 100%;
   margin: 0px;

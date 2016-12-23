@@ -1,3 +1,5 @@
+
+$wallpaper-side: url("blur-red-side.png");
 body{
   overflow: hidden;
 }
@@ -5,7 +7,7 @@ body{
   position: absolute;
   height: 100%;
   width: 250px;
-  background-color: #333;
+  background-image: $wallpaper-side;
   color: white;
 
   a{
@@ -19,19 +21,16 @@ body{
     padding: 0;
     margin: 0;
   }
-  li{
-    border: 1px solid #2a2a2a;
-    transition: border 0.3s;
-  }
+
   li:hover{
-    background: #444;
-    border-left: 3px solid white;
+  box-shadow: 0px 0px 15px rgb(47, 39, 38);
   }
   h2{
     text-align: center;
     margin: 0;
-    padding: 10px;
-    background-color: #2a2a2a;
+    padding: 11.3px;
+    background-color: rgba(196, 11, 49, 0.3);
+
   }
 }
 .page_container{
