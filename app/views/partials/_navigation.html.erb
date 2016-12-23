@@ -1,19 +1,7 @@
-<div class="row center-xs white-text middle-xs" id="navUp">
-    <div class="col-xs-8 end-xs">
-        <div class="box">
-            <h2>Bienvenido a la plataforma FEM</h2>
-        </div>
-    </div>
-    <div class="col-xs-4">
-        <%if user_signed_in?%>
-        <%= link_to "Cerrar sesion",destroy_user_session_path, method: :delete, class: "closeSesion"%>
-        <%end%>
-    </div>
-</div>
 
-<div class="row   " id="navLeft">
-    <div class="col-sm-12">
-        <div class="box start-xs">
+
+<div class="sidebar " >
+    <h2>Menu</h2>
             <nav>
                 <ul>
                     <li>
@@ -45,7 +33,24 @@
                     </li>
                 </ul>
             </nav>
-            <img src="fem.png" id="Fem">
+</div>
+
+<div class="page_container">
+  <div class="row center-xs white-text middle-xs" id="navUp">
+      <div class="col-xs-2 start-xs">
+        <div class="box">
+          <img src="<%= image_url 'menu.png' %>" alt="" class="menu-bar">
         </div>
-    </div>
+      </div>
+      <div class="col-xs-8 center-xs">
+          <div class="box">
+              <h2>Bienvenido a la plataforma FEM</h2>
+          </div>
+      </div>
+      <div class="col-xs-2">
+          <%if user_signed_in?%>
+          <%= link_to "Cerrar sesion",destroy_user_session_path, method: :delete, class: "closeSesion"%>
+          <%end%>
+      </div>
+  </div>
 </div>
