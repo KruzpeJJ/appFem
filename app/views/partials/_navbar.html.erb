@@ -1,0 +1,17 @@
+<div class="row center-xs white-text middle-xs" id="navUp">
+    <div class="col-xs-2 start-xs">
+        <div class="box">
+            <img src="<%= image_url 'menu.png' %>" alt="" class="menu-bar">
+        </div>
+    </div>
+    <div class="col-xs-8 center-xs">
+        <div class="box">
+            <h2>Bienvenido a la plataforma FEM</h2>
+        </div>
+    </div>
+    <div class="col-xs-2">
+        <%if user_signed_in?%>
+        <%= link_to "Cerrar sesion",destroy_user_session_path, method: :delete, class: "closeSesion"%>
+        <%end%>
+    </div>
+</div>

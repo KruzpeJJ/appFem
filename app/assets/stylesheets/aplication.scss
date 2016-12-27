@@ -1,7 +1,7 @@
 //@import "materialize";
 // rgb(54, 55, 56) rgba(9, 64, 171, 0.98)
-$wallpaper-nav: url("blur-red-nav.png");
-$wallpaper-blur-red: url("blur-red.jpg");
+$wallpaper-nav: url(#{asset_path('blur-red-nav.png')});
+$wallpaper-blur-red: url(#{asset_path('blur-red.jpg')});
 $primaryfont:'Open Sans', sans-serif;
 
 html,body{
@@ -35,7 +35,7 @@ html,body{
   height: 100%;
   background-image: $wallpaper-blur-red;
   background-position: center;
-  background-size: 100% 100%;
+  background-size: cover;
   #login{
     height: 100%;
   }

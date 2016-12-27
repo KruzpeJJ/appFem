@@ -10,7 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161221050204) do
+ActiveRecord::Schema.define(version: 20161226165909) do
+
+  create_table "activities", force: :cascade do |t|
+    t.string   "place",              null: false
+    t.string   "nameActivity",       null: false
+    t.date     "date",               null: false
+    t.text     "beneficiaryPersons", null: false
+    t.string   "photosLink",         null: false
+    t.string   "typeActivity"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  create_table "municipalities", force: :cascade do |t|
+    t.string   "nombre",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "notices", force: :cascade do |t|
+    t.string   "title",      null: false
+    t.string   "recipient",  null: false
+    t.text     "text",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -25,7 +50,6 @@ ActiveRecord::Schema.define(version: 20161221050204) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "username",               default: "", null: false
     t.string   "name"
     t.string   "lastname"
     t.date     "bornDate"
