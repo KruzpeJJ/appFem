@@ -1,14 +1,46 @@
-<%= render "partials/sidebar"%>
 <div class="page_container">
-  <%= render "partials/navbar"%>
-    <br>
-  <div class="row rowButton" >
-    <div class="col-xs-12">
-      <div class="box end-xs">
-        <button type="button" id="button" name="button">
-        <%= link_to "Crear un nuevo anuncio", new_notice_path %>
-        </button>
+
+  <div class="row " id="noticebar">
+    <div class="col-xs-12 center-xs middle-xs">
+      <div class="box">
+        <h2>AVISOS</h2>
       </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 ">
+      <div class="box" id="container-carousel">
+        <div id="carousel-1" class="carousel slide" data-ride="carousel">
+
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-1" data-slide-to="1"></li>
+          </ol>
+
+          <div class="carousel-inner" role="listbox">
+
+              <div class="item active">
+                <img src="/assets/navidad.png" class="img-responsive" height="20px">
+              </div>
+
+              <div class="item ">
+                <img src="/assets/fem.jpg" class="img-responsive">
+              </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <a href="#carousel-1" class="left carousel-control" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a href="#carousel-1" class="right carousel-control" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+      </a>
     </div>
   </div>
 </div>

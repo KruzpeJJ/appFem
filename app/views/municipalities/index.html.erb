@@ -1,6 +1,50 @@
-
-<%= render "partials/sidebar"%>
 <div class="page_container">
-  <%= render "partials/navbar"%>
-   <h1>Hola soy un municipio</h1>
+   <div class="row" id="municipalitiesBar">
+     <div class="col-xs-10 center-xs">
+       <div class="box" id="title">
+         <h2>
+           Gestion de Municipios
+         </h2>
+       </div>
+     </div>
+     <div class="col-xs-2">
+       <div class="box">
+         <button type="button" name="button">
+         <%= link_to "Crear un nuevo municipio", new_municipality_path %>
+         </button>
+       </div>
+     </div>
+
+
+       <% @municipalities.each do |mun| %>
+       <div class="col-xs-3">
+         <div class="box item">
+          <div class="inner up">
+            <div class="row" id="municiName">
+              <div class="col-xs-12 center-xs">
+                <div class="box">
+                  <p> <%=mun.nombre  %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="inner down">
+          <div class="row center-xs middle-xs">
+            <div class="col-xs-6">
+              <div class="box">
+                <%= button_to "Eliminar", municipality_path(mun),method: :delete,data: {confirm: 'Estas seguro'}%>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="box">
+                <%= link_to "Editar", edit_municipality_path(mun),class: "link" %>
+              </div>
+            </div>
+          </div>
+          </div>
+         </div>
+       </div>
+       <% end %>
+
+   </div>
 </div>
