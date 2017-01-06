@@ -1,6 +1,12 @@
-$(document).on('ready page:load', function () {
-  $(".menu-bar").on("click", function (e) {
-    e.preventDefault()
-    $(".page_container").toggleClass("open")
-  })
-});
+
+// $(document).ready(function () {
+//   $(".menu-bar").on("click", function (e) {
+//
+//   })
+//
+//
+// });
+
+$(document).on('click', '.menu-bar', function() {
+$(".page_container").toggleClass("open")
+})

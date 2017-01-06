@@ -1,5 +1,7 @@
 //@import "materialize";
 // rgb(54, 55, 56) rgba(9, 64, 171, 0.98)
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+
 $wallpaper-nav: url(#{asset_path('blur-red-nav.png')});
 $wallpaper-blur-red: url(#{asset_path('blur-red.jpg')});
 $wallpaper-app:      url(#{asset_path('background-app.jpg')});

@@ -1,10 +1,12 @@
 class MunicipalitiesController < ApplicationController
+
+  before_action :set_municipality, except: [:index, :new,:create]
+
   def index
     @municipalities = Municipality.all
   end
 
   def show
-    @municipality = Municipality.find(params[:id])
   end
 
   def new
@@ -12,7 +14,6 @@ class MunicipalitiesController < ApplicationController
   end
 
   def edit
-    @municipality = Municipality.find(params[:id])
   end
 
   def create
@@ -26,7 +27,6 @@ class MunicipalitiesController < ApplicationController
   end
 
   def update
-    @municipality = Municipality.find(params[:id])
 
     if @municipality.update(municipality_params)
       redirect_to @municipality
@@ -36,13 +36,16 @@ class MunicipalitiesController < ApplicationController
   end
 
   def destroy
-    @municipality = Municipality.find(params[:id])
 
     @municipality.destroy
     redirect_to municipalities_path
   end
 
   private
+    def set_municipality
+      @municipality = Municipality.find(params[:id])
+    end
+    
     def municipality_params
       params.require(:municipality).permit(:nombre)
     end

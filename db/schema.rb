@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161226165909) do
+ActiveRecord::Schema.define(version: 20170106061320) do
 
   create_table "activities", force: :cascade do |t|
     t.string   "place",              null: false
@@ -30,11 +30,14 @@ ActiveRecord::Schema.define(version: 20161226165909) do
   end
 
   create_table "notices", force: :cascade do |t|
-    t.string   "title",      null: false
-    t.string   "recipient",  null: false
-    t.text     "text",       null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "title",             null: false
+    t.text     "text",              null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "news_file_name"
+    t.string   "news_content_type"
+    t.integer  "news_file_size"
+    t.datetime "news_updated_at"
   end
 
   create_table "users", force: :cascade do |t|
